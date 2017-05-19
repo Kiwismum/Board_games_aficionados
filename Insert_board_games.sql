@@ -1,0 +1,1 @@
+INSERT INTO `board_games`(`Member ID`, `BoardGame`, `Position`, `Notes`, `Date`, `Event`) VALUES ('1','monopoly','1','', '1 April', 'club'), ('5' ,'monopoly', '2', '', '1_April', 'club'), ('8','monopoly','3','','1 April','club')

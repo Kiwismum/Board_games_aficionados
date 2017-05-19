@@ -1,0 +1,1 @@
+CREATE TABLE `boardgamers`.`board_games` ( `Member ID` INT NOT NULL ,`Boardgame` VARCHAR(50) NOT NULL , `Position` VARCHAR(5) NOT NULL , `Notes`TEXT NOT NULL , `Date` VARCHAR(10) NOT NULL , `Event` VARCHAR(100) NOT NULL ,PRIMARY KEY (`Member ID`, `Boardgame`)) ENGINE = InnoDB;

@@ -1,0 +1,309 @@
+/* BIT695 Web Technologies */
+html{background: #31393c}
+
+/*
+Image from
+https://en.wikipedia.org/wiki/Shogun_(2006_board_game)
+*/
+body{
+    background-image: url(index_playing_game-900x500.jpg); 
+    height: 500px;
+    width: 900px;
+    font-family: Arial, sans-serif;
+    color: #0d5375;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#home{
+    position: relative;
+    top: -120px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 11%;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    border: 1px #fff solid;
+}
+
+#home:hover{
+    background-color: RGB(13,83,117);
+
+}
+
+header h1{
+    color: #fff;
+    background-color: RGB(13,83,117);
+    position: relative;
+    top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 495px;
+    height: 130px;
+    padding: 0px 0px 10px 0px;
+    font-size: 40px;
+    line-height: 70px;
+}
+
+h2 {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 25px;
+    font-variant:  small-caps;
+    text-align: center;
+}
+
+h2 span{
+    display: block;
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+span{
+    display: block;
+    font-weight: normal;
+    font-size: 11px;
+}
+
+h3{
+    margin-bottom: 0px;
+    clear: both;
+	font-weight: bold;
+}
+
+p{
+    clear: both;
+    margin-top: 0px;
+}
+
+nav{     
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    top: 283px;
+    overflow: visible;
+}
+
+nav li{
+    width: 125px;
+    text-align: center;
+    display: inline;
+    padding: 15px 0px 15px 0px;
+    margin: 5px;
+    background: RGBA(13, 83, 117, 1);
+}
+
+main{
+    background: #c1d1dd;
+    margin-top: 273px;
+    padding: 0px 0px 20px 0px;
+}
+
+#left_bar{
+    height: 200px;
+    width: 40px ;
+    position: relative;
+    right: -100px;
+    top: 90px;
+}
+
+#right_bar{
+    height: 200px;
+    width: 40px ;
+    position: relative;
+    left: 700px;
+    top: 90px;
+}
+
+#left_semcircle{
+    height: 96px;
+    width: 48px ;
+    padding-left: 100px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+#right_semcircle{
+    height: 96px;
+    width: 48px ;
+    padding-right: 100px;
+    float: right;
+    margin-bottom: 10px;
+}
+
+section{
+    top: -130px;
+    right: -156px; 
+    position: relative;
+    width: 530px;
+    text-align: justify;
+    padding: -0px 20px 0px 20px;
+}
+
+.content_pages{
+    top: auto;
+    left: 0px;
+    position: relative;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav a{
+    color: #fff;
+    font-size: 20px;   
+    background: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+a:link{
+    text-decoration: none;
+    color: #fff;
+}
+
+a:visited{
+    color: RGBA(169, 169, 169, 1);
+}
+
+nav li:hover{
+    background: RGBA(13, 83, 117, 0.5);
+}
+
+a:hover{
+    color: RGBA(169, 169, 169, 1);
+}
+
+table{
+    margin-bottom: 10px;
+    width:100%;
+}
+
+table, th, td {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background-color: RGBA(49, 57, 60, 0.25);
+}
+
+table tr:nth-child(odd) {
+   background-color: RGBA(49, 57, 60, 0.06);
+}
+
+table th{
+    background-color: RGBA(13, 83, 117, 0.5);
+    color: #fff;
+}
+
+.set_date_input:hover{
+    cursor: pointer;
+}
+
+dt{
+ font-weight: bolder;
+	-webkit-font-smooth: auto;
+	-ms-font-smooth: auto;
+	-moz-font-smooth: auto;
+}
+
+dd{
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+fieldset{
+    padding: 0px 0px 0px 0px;
+    border: none;
+    margin: 20px 0px 20px 0px;
+}
+legend{
+    font-size: 18px;
+}
+.textInputs label{
+    width: 150px;
+    float:left;
+}
+
+.textInputs input, .textInputs select{
+    float: left;
+    width: 230px;
+	margin-bottom:10px;
+}
+
+.textInputs li{
+    padding-bottom:30px;
+    clear: both;
+    list-style: none;
+}
+
+footer{
+    padding: 10px;
+    font-size: 10px;
+    text-align: center;
+    color: #c1d1dd;
+    background-color: RGBA(13, 83, 117, 1);
+}
+.footerName{
+	font-style: italic;
+}
+label{
+	position:relative;
+	font-weight: bold;
+	font-size:20px;
+}
+
+input{	
+	height:20px;
+	font-size:18px;
+	border-radius:5px;
+}
+
+button{
+	width:80px;
+	height:40px;
+	font-size:20px;
+	font-weight: bold;
+	border-radius:5px;
+	color: #c1d1dd;
+	background-color:RGBA(13, 83, 117, 1);
+}
+select{
+	height:30px;
+	font-size:18px;
+	border-radius:5px;
+}
+#wrapper{
+	top: -150px;
+    position: relative;
+    width: 450px;
+    text-align: justify;
+    padding: -0px 20px 0px 20px;
+	margin: auto;
+}
+header, section, footer, aside, nav, main, article, figure {
+    display: block; 
+}
+h3#error{
+	
+	color: red;
+	
+}
+input:-moz-read-only { /* For Firefox */
+    background-color: silver;
+}
+
+input:read-only { 
+    background-color: silver;
+}

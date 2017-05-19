@@ -1,0 +1,1 @@
+CREATE TABLE `boardgamers`.`players` ( `Member ID` INT NOT NULL AUTO_INCREMENT ,`First Name` VARCHAR(20) NOT NULL , `Last Name` VARCHAR(30) NOT NULL , `Email`VARCHAR(50) NOT NULL , `Phone` VARCHAR(15) NOT NULL , PRIMARY KEY (`Member ID`)) ENGINE = InnoDB;

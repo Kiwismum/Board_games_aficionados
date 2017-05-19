@@ -1,0 +1,33 @@
+<!-- BIT695 Web Technologies -->
+            <form id="join_us" method="POST" enctype="application/x-www-form-urlencoded" action="add_player.php">
+                <input type="hidden" name="recipient" value="Some Person">
+                <input type="hidden" name="subject" value="New Player">
+                <input type="hidden" name="followup-page" value="">
+                <fieldset class="textInputs">
+                    <legend>Legend</legend>
+                    <p><span>Clicking on a date will enter it into the form below</p></span>
+                    <ul>
+                        <li>
+                            <label for="firstname">Firstname:</label>
+                            <input name="fName" type="text" id="firstname" tabindex="1" title="First and middle name" required pattern="[a-z A-Z]+" placeholder="Please enter first name">
+                        </li>
+                        <li>
+                            <label for="surname">Surname:</label>
+                            <input name="lName" type="text" id="surname" tabindex="2" title="Last name" required pattern="[a-z A-Z]+" placeholder="Please enter last name">
+                        </li>
+                        <li>
+                            <label for="sender">Email address:</label>
+                            <input name="email" type="text" id="sender" tabindex="3" title="email@example.com" required pattern="^[a-z 0-9]+@[a-z 0-9]+\.[a-z]{2,4}" placeholder="example@example.com">
+                        </li>
+                        <li>
+                            <label for="phone">Phone number:</label>
+                            <input name="phone" type="tel" id="phone" tabindex="4" title="Contact number" required pattern="[0-9 -()]+" placeholder="(64) 123456789">
+                        </li>
+                        <li>
+                            <label for="game_day_input">Join a game</label>
+                            <input type="text" id="game_day_input" tabindex="5" title="Join a game" required>
+                        </li>
+                    </ul>
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>

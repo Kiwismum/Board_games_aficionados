@@ -1,0 +1,79 @@
+<DOCTYPE html>
+<html>
+<!-- BIT695 Web Technologies -->
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="set_form_date.js"></script>
+    <title>Events</title>
+</head>
+
+<body>
+    <header>
+        <h1>Board games aficionados</h1>
+        <nav id="follow_me">
+            <ul>
+                <li><a>Weekly Calender</a></li>
+				<li><a href="player_info.htm">Join Us</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content_pages">
+            <img style="padding-top: 50px" id="left_semcircle" src="half_circle_left.gif" alt="">
+            <img style="padding-top: 50px" id="right_semcircle" src="half_circle_right.gif" alt="">
+            <h2 style="padding-top: 70px">Events Calender</h2>
+            <table>
+                <tr>
+                    <td colspan="3">Weekly Games</td>
+                </tr>
+                <tr>
+                    <td scope="col">Weekday</td>
+                    <td scope="col">Time</th>
+                    <td scope="col">Location</th>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>no game</td>
+                    <td>no game</td>
+                </tr>
+                <tr class="set_date_input" onclick="tuesday()">
+                    <td id="tgame_date">Tuesday</td>
+                    <td id="tgame_time">7:00pm</td>
+                    <td id="tgame_room">Clubs and Socs room 2.14</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>no game</td>
+                    <td>no game</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>no game</td>
+                    <td>no game</td>
+                </tr>
+                <tr class="set_date_input" onclick="friday()">
+                    <td id="fgame_date">Friday</td>
+                    <td id="fgame_time">8:00pm</td>
+                    <td id="fgame_room">Cavern Tavern</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>no game</td>
+                    <td>no game</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>no game</td>
+                    <td>no game</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>Board games aficionados</p><p>1970-2015</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<!-- BIT695 Web Technologies -->
+<head>
+    <link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+	
+    <meta charset="utf-8">
+    <title>Forms</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Board games aficionados</h1>
+        <nav id="follow_me">
+            <ul>
+                <li><a href="Events.html">Weekly Calender</a></li>
+				<li><a href="player_info.htm">Join Us</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <img id="left_bar" src="index_sidebar.gif" alt = "sidebar left">
+        <img id="right_bar" src="index_sidebar-r.gif" alt = "sidebar right">
+        <div id="wrapper">
+		
+            <h2>Join Us</h2>
+			<form  name="joinUs" method = "POST" onsubmit="return validateForm()" id="form" 
+			action="save_player.php">
+			<fieldset class="textInputs">
+			
+				<label for="firstname">Firstname:</label>
+				<input type="text" id="firstname" name="firstname" Placeholder="Please enter first name." 
+				title="Your first name eg John" tabindex="1" maxlength="20" pattern="[a-zA-Z \-']+" required>
+
+				<label for="lastname">Surname:</label>
+				<input type="text" id="lastname" name="lastname" Placeholder="Please enter surname." 
+				title="Your last name eg Smith" tabindex="2" maxlength="30" pattern="[a-zA-Z \-']+" required>
+
+				<label for="phoneNum">Phone number:</label>
+				<input type="tel" id="phoneNum" name="phoneNum" Placeholder="(021) 1234 56789" 
+				title="021 123 4567" tabindex="3" maxlength="15" pattern="[0-9 \-()]+" required>
+
+				<label for="email">Email address:</label>
+				<input type="email" id="email" name="email" Placeholder="eg.name@email.co.nz" 
+				title="Your email address eg name@email.co.nz" tabindex="4" maxlength="50" 
+				pattern="^[a-zA-Z0-9\.\-'_%]+@[a-zA-Z0-9\-]+[\.[a-zA-Z0-9\-]+]*[\.[a-zA-Z]{2,}]+" required>
+			
+			</fieldset>
+			<div>
+				<button type="submit" id="submit" tabindex="6" onclick="return validateForm">submit</button>
+			</div>
+			
+			</form>
+           
+        </div>
+		   
+    </main>
+    <footer>
+        <p class = "footerName">Board games aficionados</p>
+		<p>1970-2015</p>
+    </footer>
+</body>
+</html>
