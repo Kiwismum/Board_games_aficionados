@@ -33,16 +33,5 @@ function validateForm()
 		return str.replace(/^\s+|\s+$/g, '');
 	}
 
-	function validateDelete()
-	{
-		
-		if(confirm("Are you sure you want to delete this player?")){
-			
-			document.getElementById("deleteid").value = document.getElementById("id").value;
-			return true;
-		
-		}else
-			
-			return false;
-		
-	}
+
+	

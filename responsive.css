@@ -1,0 +1,298 @@
+/*
+Set rules for responsiveness
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+	
+	@media only screen and (max-width: 600px) {
+		/* For mobile phones: */
+	html{background: #c1d1dd}
+	
+	body{
+		background-image: url(index_playing_game-900x500.jpg ); 
+		height:300px;
+		width: 100%;
+		background-size: auto;
+		font-family: Arial, sans-serif;
+		color: #0d5375;
+	}	
+	
+
+	header h1{
+		color: #fff;
+		background-color: RGB(13,83,117);
+		position: relative;
+		top: 120px;
+		text-align: center;
+		width: 80%;
+		height: auto;
+		padding: 0px 0px 10px 0px;
+		font-size: 30px;
+		line-height: 35px;
+	}
+
+	h2 {
+		width:100%;
+		font-size: 25px;
+		font-variant:  small-caps;
+		text-align: center;
+	}
+/* adjust navigation bar*/
+nav{     
+    top: 183px;
+}
+
+	.topnav li:not(:first-child) {display: none;}
+	.topnav li.icon {
+		float: right;
+		display: block;
+	}
+	
+	  .topnav.responsive {position: relative;}
+	  .topnav.responsive li {
+		float: none;
+		display: block;
+		text-align: left;
+	  }
+	  .topnav.responsive li.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+		text-align: center;
+	  }
+  
+/*remove side bar */	
+	.sidebar{
+		display:none;
+		 
+	}
+
+	main{
+		background: #c1d1dd;
+		margin-top: 250px;
+
+	}	
+
+	section{
+		top: auto;
+		right: -50px; 
+		position: relative;
+		width:80%;
+		text-align: justify;
+		padding: 0px 0px 0px 0px;
+	}
+
+	.content_pages{
+		top: auto;
+		left: 0px;
+		position: relative;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+	fieldset{
+		width:90%;
+	}
+	
+	.textInputs input, .textInputs select{
+		float: left;
+		width: 230px;
+		margin-bottom:10px;
+		height:auto;
+	}
+
+
+	button{
+		width:80px;
+		height:40px;
+		font-size:20px;
+		font-weight: bold;
+		border-radius:5px;
+		color: #c1d1dd;
+		background-color:RGBA(13, 83, 117, 1);
+	}
+
+	#wrapper{
+		top: auto;
+		right: -50px; 
+		position: relative;
+		width:90%;
+		text-align: justify;
+		padding: 10px 20px 0px 20px;	
+		
+	}
+
+
+}
+
+@media only screen and (max-width: 800px) {
+		/* For tablets: */
+		html{background: #c1d1dd}
+	
+	body{
+		background-image: url(index_playing_game-900x500.jpg ); 
+		height:300px;
+		width: 100%;
+		background-size: auto;
+		font-family: Arial, sans-serif;
+		color: #0d5375;
+	}	
+
+	header h1{
+		color: #fff;
+		background-color: RGB(13,83,117);
+		position: relative;
+		top: 120px;
+		text-align: center;
+		width: 80%;
+		height: auto;
+		padding: 0px 0px 10px 0px;
+		font-size: 30px;
+		line-height: 35px;
+	}
+
+	h2 {
+		width:100%;
+		font-size: 25px;
+		font-variant:  small-caps;
+		text-align: center;
+	}
+/* adjust navigation bar*/
+/*
+	nav{  
+		list-style-type:none;
+		position: relative;
+		width: 100%;
+		top: 160px;
+		
+	}
+	
+	nav ul{
+		list-style-type: none;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background: RGBA(13, 83, 117, 1);
+	}
+
+	nav li{
+		display: block;
+		width:100%;
+	}
+	nav a{
+		color: #fff;
+		font-size: 20px;   
+		background: none;
+		padding:0px 0px 0px 0px;
+	}
+*/
+/* adjust navigation bar*/
+nav{
+    top: 183px;
+}
+
+	.topnav li:not(:first-child) {display: none;}
+	.topnav li.icon {
+		float: left;
+		display: block;
+	}
+	
+	  .topnav.responsive {position: relative;}
+	  .topnav.responsive li {
+		float: none;
+		display: block;
+		text-align: left;
+	  }
+	  .topnav.responsive li.icon {
+		text-align: center;
+	  }
+
+/*remove side bar */	
+	.sidebar{
+		display:none;
+		 
+	}
+	fieldset div{
+		
+		overflow:hidden;
+	}
+
+	main{
+		background: #c1d1dd;
+		margin-top: 250px;
+
+	}	
+
+	section{
+		top: auto;
+		right: -50px; 
+		position: relative;
+		width:80%;
+		text-align: justify;
+		padding: 0px 0px 0px 0px;
+	}
+
+	.content_pages{
+		top: auto;
+		left: 0px;
+		position: relative;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+	fieldset{
+		width:90%;
+	}
+	
+	.textInputs input, .textInputs select{
+		float: left;
+		width: 230px;
+		margin-bottom:10px;
+		height:auto;
+	}
+
+
+	button{
+		width:80px;
+		height:40px;
+		font-size:20px;
+		font-weight: bold;
+		border-radius:5px;
+		color: #c1d1dd;
+		background-color:RGBA(13, 83, 117, 1);
+	}
+
+	#wrapper{
+		top: auto;
+		right: -50px; 
+		position: relative;
+		width:90%;
+		text-align: justify;
+		padding: 10px 20px 0px 20px;	
+		
+	}
+	footer{
+	position: relative;
+	bottom: 0px;
+	 
+	
+}
+
+
+}
+

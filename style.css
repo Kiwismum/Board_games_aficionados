@@ -1,6 +1,7 @@
 /* BIT695 Web Technologies */
 html{background: #31393c}
 
+
 /*
 Image from
 https://en.wikipedia.org/wiki/Shogun_(2006_board_game)
@@ -9,6 +10,7 @@ body{
     background-image: url(index_playing_game-900x500.jpg); 
     height: 500px;
     width: 900px;
+	background-size: cover;
     font-family: Arial, sans-serif;
     color: #0d5375;
     margin-left: auto;
@@ -83,19 +85,61 @@ nav{
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 600px;
+    width: 100%; /* 600px; */
     top: 283px;
     overflow: visible;
+	
 }
 
 nav li{
-    width: 125px;
+    width: 150px;
     text-align: center;
     display: inline;
-    padding: 15px 0px 15px 0px;
+	font-size: 15px;
+    /*padding: 5px 0px 5px 0px;*/
     margin: 5px;
     background: RGBA(13, 83, 117, 1);
 }
+
+	nav div {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	ul.topnav {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.topnav {
+	  overflow: hidden;
+	  /*background-color: #333;*/
+	}
+
+	ul.topnav li {
+	  float: left;
+	  display: block;
+	  color: #f2f2f2;
+	  text-align: center;
+	  /*margin: 0;*/
+	  /*padding: 0; /* 14px 16px; */
+	  /* text-decoration: none; */
+	  font-size: 17px;
+	}
+
+	ul.topnav li a {
+		display: block;
+		/*border-right: 1px solid #f4f4f4;*/
+		text-decoration: none;
+	}
+	ul.topnav li a:hover {
+	  background-color: #ddd;
+	  color: black;
+	}
+
+	.topnav .icon {
+	  display: none;
+	}
 
 main{
     background: #c1d1dd;
@@ -202,6 +246,10 @@ table tr:nth-child(odd) {
    background-color: RGBA(49, 57, 60, 0.06);
 }
 
+table a:active, table a:hover, table a:visited, table a:link{
+    color: #fff;
+}
+
 table th{
     background-color: RGBA(13, 83, 117, 0.5);
     color: #fff;
@@ -240,6 +288,7 @@ legend{
     float: left;
     width: 230px;
 	margin-bottom:10px;
+	height:auto;
 }
 
 .textInputs li{
@@ -254,6 +303,8 @@ footer{
     text-align: center;
     color: #c1d1dd;
     background-color: RGBA(13, 83, 117, 1);
+	 
+	
 }
 .footerName{
 	font-style: italic;
@@ -271,7 +322,7 @@ input{
 }
 
 button{
-	width:80px;
+	width:150px;
 	height:40px;
 	font-size:20px;
 	font-weight: bold;
@@ -307,3 +358,6 @@ input:-moz-read-only { /* For Firefox */
 input:read-only { 
     background-color: silver;
 }
+.login
+
+

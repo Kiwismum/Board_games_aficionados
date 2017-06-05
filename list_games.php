@@ -21,7 +21,7 @@
 	<script type="text/javascript" src="responsive.js"></script>
     <meta charset="utf-8">
 	
-    <title>List Players</title>
+    <title>List Games</title>
 </head>
 
 <body>
@@ -41,17 +41,17 @@
         <img id="right_bar" src="index_sidebar-r.gif" alt = "sidebar right">
 		</div>
 		<section>
-            <h2>Players</h2>
+            <h2>Games</h2>
 <?php
 // get data from database table.
 
-	$query = "SELECT * FROM players ORDER BY `First Name`, `Family Name`, `Member ID`";
+	$query = "SELECT `game_id`, `game_name` FROM board_games ORDER BY `game_name`";
 	
-// creating the players table.
+// creating the game table.
 	
 // output table tag and header row first:
 
-	echo '<table border=1><tr><th>Name</th><th>Email</th><th>Phone</th></tr>';	
+	echo '<table border=1><tr><th>Game</th></tr>';	
 
 // output data of each row
 	
@@ -61,15 +61,8 @@
 		
 			echo '<tr><td>';
 
-			echo "<a href='player_info.php?id=".$row['Member ID']."'>".htmlspecialchars($row['First Name'])." ".htmlspecialchars($row['Family Name'])."</a>";
+			echo "<a href='game_info.php?id=".$row['game_id']."'>".htmlspecialchars($row['game_name'])."</a>";
 			
-			echo '</td><td>';
-
-			echo htmlspecialchars($row['Email']);
-			
-			echo '</td><td>';
-
-			echo htmlspecialchars($row['Phone']);
 
 		echo '</td></tr>';
 		
@@ -81,7 +74,7 @@
 			
 	mysqli_close($link);	
 ?>
-			<a href="player_info.php"><button>Add Player</button></a>
+			<a href="game_info.php"><button>Add Game</button></a>
         </section>
     </main>
     <footer>

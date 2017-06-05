@@ -21,7 +21,7 @@
 	<script type="text/javascript" src="responsive.js"></script>
     <meta charset="utf-8">
 	
-    <title>List Players</title>
+    <title>List Schedule</title>
 </head>
 
 <body>
@@ -41,19 +41,24 @@
         <img id="right_bar" src="index_sidebar-r.gif" alt = "sidebar right">
 		</div>
 		<section>
-            <h2>Players</h2>
+            <h2>Events</h2>
+			
+
 <?php
 // get data from database table.
 
-	$query = "SELECT * FROM players ORDER BY `First Name`, `Family Name`, `Member ID`";
+	$query = "SELECT s.Competion, s.Date, s.Time, bg.game_name Game, s.Location FROM schedule s LEFT OUTER JOIN board_games bg ON bg.game_id=s.gameid ORDER BY s.Date, s.Time, bg.game_name";
 	
-// creating the players table.
+	
+// creating the schedule table.
 	
 // output table tag and header row first:
 
-	echo '<table border=1><tr><th>Name</th><th>Email</th><th>Phone</th></tr>';	
+	echo '<table border=1><tr><th>Date/Time</th><th>Game</th><th>Location</th></tr>';	
 
 // output data of each row
+
+
 	
 	if ($result = mysqli_query($link, $query)) {
 		
@@ -61,15 +66,15 @@
 		
 			echo '<tr><td>';
 
-			echo "<a href='player_info.php?id=".$row['Member ID']."'>".htmlspecialchars($row['First Name'])." ".htmlspecialchars($row['Family Name'])."</a>";
+			echo "<a href='schedule.php?id=".$row['Competion']."'>".htmlspecialchars(date("d M Y", strtotime($row['Date'])))." ".htmlspecialchars(date("h:i a", strtotime($row['Time'])))."</a>";
 			
 			echo '</td><td>';
 
-			echo htmlspecialchars($row['Email']);
+			echo htmlspecialchars($row['Game']);
 			
 			echo '</td><td>';
 
-			echo htmlspecialchars($row['Phone']);
+			echo htmlspecialchars($row['Location']);
 
 		echo '</td></tr>';
 		
@@ -81,7 +86,7 @@
 			
 	mysqli_close($link);	
 ?>
-			<a href="player_info.php"><button>Add Player</button></a>
+			<a href="schedule.php"><button>Add Event</button></a>
         </section>
     </main>
     <footer>
