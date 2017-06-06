@@ -23,6 +23,16 @@ ALTER TABLE `board_games`
   MODIFY `game_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
   
 --
+-- Populating `board_games` table
+--
+
+INSERT INTO `board_games` (`game_name`, `min_players`, `max_players`) VALUES
+('Scrabble', 2, 4),
+('Monopoly', 2, 8),
+('Catan', 2, 6),
+('Risk', 3, 6);
+  
+--
 -- Table structure for table `players`
 --
 
@@ -153,5 +163,9 @@ ALTER TABLE `scoring`
 --
 ALTER TABLE `scoring`
   ADD CONSTRAINT `scoring_event_id` FOREIGN KEY (`Event_ID`) REFERENCES `schedule` (`Competion`) ON DELETE CASCADE ON UPDATE CASCADE;
+  
+  
+  
+  
 
 
