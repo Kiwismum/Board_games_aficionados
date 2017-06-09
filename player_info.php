@@ -1,5 +1,10 @@
 <?php
 
+// link to validateUser for security
+
+	include("validateUser.php");
+
+
 //connect to database
 
 	$link = mysqli_connect("localhost", "root", "root", "boardgamers");
@@ -24,11 +29,25 @@
 
 // See if id has been provided
 
+
 		$id = intval($_GET['id']);
+		if($id == 0 && isset($_SESSION["id"]) && $_SESSION["id"] != 0){
+			$id = $_SESSION["id"];
+		}
+
 		if($id != 0)
 		{
 			
-	// get data from database table.
+//Checking id so only administrators have access to all profiles
+
+			if(!isset ($_SESSION["id"]) || ($_SESSION["id"] != $id && (!isset ($_SESSION["admin"]) || !$_SESSION["admin"]))){
+			
+				echo "This page is only available to administrators.";
+				exit;
+			}
+			
+			
+// get data from database table.
 
 			$query = "SELECT * FROM players where `Member ID` = $id";
 			if ($result = mysqli_query($link, $query)) {
@@ -142,6 +161,7 @@
 <?php
 	//connect to database
 	$count = 0;
+	$tabCount = 7;
 	$link = mysqli_connect("localhost", "root", "root", "boardgamers");
 
 	if ($link) {
@@ -160,16 +180,17 @@
 					$playChecked ="";
 					if($own != 0){
 						$ownChecked = " checked";
-					
+
 					}
 					if($play != 0){
 						$playChecked = " checked";
 					}
-
+					$ownTabIndex = $tabCount++;
+					$playTabIndex = $tabCount++;
 					print <<<EOT
                 <tr>
-                    <td><input type="checkbox" name="own_$game_id"$ownChecked></td>
-                    <td><input type="checkbox" name="play_$game_id"$playChecked></td>
+                    <td><input type="checkbox" name="own_$game_id"$ownChecked tabindex="$ownTabIndex"></td>
+                    <td><input type="checkbox" name="play_$game_id"$playChecked tabindex = "$playTabIndex"></td>
                     <td><a href="game_info.php?id=$game_id">$game</a></td>
                 </tr>
 EOT;
@@ -191,9 +212,9 @@ EOT;
 				</div>
 	
 				<div>
-					<button type="submit" id="submit" tabindex="7" onclick="return validateForm()">Save</button>
+					<button type="submit" id="submit" tabindex="<?php echo $tabCount++; ?>" onclick="return validateForm()">Save</button>
 <?php if($id != 0 && isset ($_SESSION["id"]) && $id != $_SESSION["id"]) { ?>
-				<button type="submit" id="delete" tabindex="7" onclick="return validateDelete()">Delete</button>
+				<button type="submit" id="delete" tabindex="<?php echo $tabCount++; ?>" onclick="return validateDelete()">Delete</button>
 <?php } ?>
 				</div>
 
@@ -236,6 +257,17 @@ EOT;
 		$email= clean_input($_POST['email']);
 		$username= clean_input($_POST['username']);
 		$password= clean_input($_POST['password']);
+		
+		if ($id != 0){
+			
+//Checking id for security
+
+			if(!isset ($_SESSION["id"]) || ($_SESSION["id"] != $id && (!isset ($_SESSION["admin"]) || !$_SESSION["admin"]))){
+			
+				echo "This page is only available to administrators.";
+				exit;
+			}
+		}
 
 // server side validation.
 	
@@ -417,6 +449,15 @@ EOT;
 	function deletePlayer($id)
 	{
 		global $link;
+		
+//Checking id so only administrators can delete a player but cannot delete themselves.
+
+		if(!isset ($_SESSION["id"]) || $_SESSION["id"] == $id || !isset ($_SESSION["admin"]) || !$_SESSION["admin"]){
+		
+			echo "This activity is only available to administrators.";
+			exit;
+		}
+		
 		
 	//delete data from player table.
 

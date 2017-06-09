@@ -1,4 +1,13 @@
 <?php
+// link to validateUser for security
+
+	include("validateUser.php");
+	if(!isset ($_SESSION["admin"]) || !$_SESSION["admin"]){
+		
+		echo "This page is only available to administrators.";
+		exit;
+	}
+
 //connect to database
 
 	$link = mysqli_connect("localhost", "root", "root", "boardgamers");

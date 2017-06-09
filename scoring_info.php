@@ -1,4 +1,13 @@
 <?php
+// link to validateUser for security
+
+	include("validateUser.php");
+	if(!isset ($_SESSION["admin"]) || !$_SESSION["admin"]){
+		
+		echo "This page is only available to administrators.";
+		exit;
+	}
+
 
 // There is an assumtion that not all competition players will be members.
 
@@ -158,7 +167,7 @@
 			<div>
 				<button type="submit" id="submit" tabindex="7" onclick="return validateForm">Save</button>
 <?php if($id != 0) { ?>
-				<button type="submit" id="delete" tabindex="7" onclick="return validateDelete()">Delete</button>
+				<button type="submit" id="delete" tabindex="8" onclick="return validateDelete()">Delete</button>
 <?php } ?>
 			</div>
 			
